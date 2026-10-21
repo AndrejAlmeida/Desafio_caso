@@ -6,7 +6,7 @@ Desafio no Sicredi NovaRota
 ## Overview
 
 The Invoice Processing Pipeline automates data extraction from delivery platform invoices (UberEats, DoorDash, Grubhub, iFood, Rappi) using **Gemini 2.0 Flash** vision AI with **Pydantic validation**.
-
+```text
 NovaRota_Databricks/
 ├── README.md
 ├── .Gitignore
@@ -24,7 +24,7 @@ NovaRota_Databricks/
 │   
 └── resources/
     └── lakeflow_job.yml
-
+```
 ## Architecture
 
 ```text
