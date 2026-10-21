@@ -3,9 +3,10 @@ Desafio no Sicredi NovaRota
 ## Aqui colocarei algumas descricoes , imagens e evidencias serão colocadas no arquivo PDF, que será disponibilizado.
 
 
-## Overview
+## Architecture
 
-The Invoice Processing Pipeline automates data extraction from delivery platform invoices (UberEats, DoorDash, Grubhub, iFood, Rappi) using **Gemini 2.0 Flash** vision AI with **Pydantic validation**.
+** A arquitetura pensei nesta abaixo, um pouco mais encurtada, mas acredito que seja praticável.**
+
 ```text
 NovaRota_Databricks/
 ├── README.md
@@ -25,61 +26,12 @@ NovaRota_Databricks/
 └── resources/
     └── lakeflow_job.yml
 ```
-## Architecture
-
-```text
-INGESTION          PROCESSING                              STORAGE
-─────────          ──────────                              ───────
-
-┌───────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐
-│ TIFF  │──▶│ TIFF→PNG │──▶│ CLASSIFY │──▶│ EXTRACT  │──▶│  WRITE   │──▶ BigQuery
-│ (GCS) │   │          │   │          │   │ (Gemini) │   │          │
-└───────┘   └──────────┘   └──────────┘   └──────────┘   └──────────┘
-    │           │              │              │              │
-    └───────────┴──────────────┴──────────────┴──────────────┘
-                          Pub/Sub (events)
-                               │
-                          ┌────┴────┐
-                          │   DLQ   │ ◀── Failed messages
-                          │Processor│
-                          └─────────┘
-
-OBSERVABILITY                              AUTONOMOUS OPS
-─────────────                              ──────────────
-
-┌───────────┐  ┌───────────┐  ┌───────────┐    ┌─────────┐  ┌───────────┐  ┌──────────┐
-│ LangFuse  │  │Cloud Logs │  │ Metrics   │    │ TRIAGE  │─▶│ROOT CAUSE │─▶│ REPORTER │─▶ Slack
-└───────────┘  └───────────┘  └───────────┘    └─────────┘  └───────────┘  └──────────┘
-```
-
-### Technology Stack
-
-| Layer | Technology | Purpose |
-|-------|------------|---------|
-| **Cloud** | Google Cloud Platform | Primary infrastructure |
-| **Compute** | Cloud Run Functions | Serverless event-driven compute |
-| **Messaging** | Pub/Sub | Event-driven communication with DLQ |
-| **Storage** | GCS | File storage (input, processed, archive, failed) |
-| **Data Warehouse** | BigQuery | Extracted invoice data |
-| **LLM** | Gemini 2.0 Flash | Document extraction |
-| **LLM Fallback** | OpenRouter (Claude 3.5/GPT-4o) | Backup provider |
-| **LLMOps** | LangFuse | Distributed tracing, cost tracking, prompt management |
-| **Validation** | Pydantic v2 | Structured output validation |
-| **IaC** | Terraform + Terragrunt | Infrastructure provisioning |
-| **CI/CD** | GitHub Actions | Automated testing and deployment |
-| **Code Review** | CodeRabbit + Claude | AI-powered PR review |
-| **Security** | detect-secrets, Trivy | Secret scanning, vulnerability scanning |
-| **Autonomous Ops** | CrewAI | AI agents for monitoring |
-
----
-
-## Quick Start
 
 ### Prerequisites
 
-- Python 3.11+
-- OpenRouter API key (required)
-- GCP project with Vertex AI enabled (optional, for Gemini)
+- Python | SQL | 
+- Databricks | Unit Catalog 
+- query | job | plano de execução
 
 ### Installation
 
