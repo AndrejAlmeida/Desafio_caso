@@ -1,0 +1,42 @@
+CREATE TABLE IF NOT EXISTS sicredi.novarota.cartoes_cdc_bronze (
+    id_cartao         BIGINT         NOT NULL,
+    id_conta          BIGINT         NOT NULL,
+    tipo_cartao       STRING,
+    limite            DECIMAL(15,2),
+    status_cartao     STRING,
+    data_atualizacao  TIMESTAMP,
+    operacao          STRING
+)
+USING DELTA;
+
+
+INSERT INTO sicredi.novarota.cartoes_cdc_bronze (
+    id_cartao,
+    id_conta,
+    tipo_cartao,
+    limite,
+    status_cartao,
+    data_atualizacao,
+    operacao
+)
+VALUES
+(90001, 1001, 'CREDITO', 5000.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90002, 1002, 'DEBITO',     0.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90003, 1003, 'CREDITO', 7500.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90004, 1004, 'CREDITO', 2500.00, 'INATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90005, 1005, 'DEBITO',     0.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90006, 1006, 'CREDITO', 3500.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90007, 1007, 'CREDITO', 6000.00, 'BLOQUEADO', CURRENT_TIMESTAMP(), 'I'),
+(90008, 1008, 'DEBITO',     0.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90009, 1009, 'CREDITO', 4200.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90010, 1010, 'CREDITO', 1800.00, 'INATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90011, 1011, 'DEBITO',     0.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90012, 1012, 'CREDITO', 9000.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90013, 1013, 'CREDITO', 5500.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90014, 1014, 'DEBITO',     0.00, 'BLOQUEADO', CURRENT_TIMESTAMP(), 'I'),
+(90015, 1015, 'CREDITO', 12000.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90016, 1016, 'CREDITO', 3200.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90017, 1017, 'DEBITO',     0.00, 'INATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90018, 1018, 'CREDITO', 4800.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90019, 1019, 'CREDITO', 6800.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I'),
+(90020, 1020, 'DEBITO',     0.00, 'ATIVO', CURRENT_TIMESTAMP(), 'I');
