@@ -1,40 +1,29 @@
 Desafio no Sicredi NovaRota
 
-# Invoice Processing Pipeline
+## Aqui colocarei algumas descricoes , imagens e evidencias serão colocadas no arquivo PDF, que será disponibilizado.
 
-> AI-powered serverless invoice extraction for restaurant partner reconciliation
-
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![Pydantic v2](https://img.shields.io/badge/pydantic-v2-green.svg)](https://docs.pydantic.dev/)
-[![GCP](https://img.shields.io/badge/cloud-GCP-4285F4.svg)](https://cloud.google.com/)
-[![Terraform](https://img.shields.io/badge/IaC-Terraform-623CE4.svg)](https://www.terraform.io/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://img.shields.io/badge/tests-218%20functions-brightgreen.svg)](#testing)
-
----
 
 ## Overview
 
 The Invoice Processing Pipeline automates data extraction from delivery platform invoices (UberEats, DoorDash, Grubhub, iFood, Rappi) using **Gemini 2.0 Flash** vision AI with **Pydantic validation**.
 
-### Business Problem
-
-- **3 FTEs** spend 80% of time on manual data entry from delivery platform invoices
-- **R$45,000+** in reconciliation errors quarterly
-- **2,000+ invoices/month** (growing to 3,500 by end of year)
-
-### Solution
-
-Cloud-native serverless pipeline achieving:
-
-| Metric | Target |
-|--------|--------|
-| Extraction accuracy | ≥ 90% |
-| Processing latency P95 | < 30 seconds |
-| Cost per invoice | < $0.01 |
-| Manual processing reduction | > 80% |
-
----
+NovaRota_Databricks/
+├── README.md
+├── .Gitignore
+├── docs/
+│   ├── architecture.md
+│   ├── data_dictionary.md
+│   ├── data_quality.md
+│   |── operations_runbook.md
+|___img/
+├── NovaRota/
+│   ├── bronze/
+│   ├── silver/
+│   └── gold/
+├── tests/
+│   
+└── resources/
+    └── lakeflow_job.yml
 
 ## Architecture
 
