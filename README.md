@@ -57,7 +57,7 @@ Camada de domínio: concentra as regras de negócio e as validações centrais.
 ### Estrutura de diretórios
 
 Exemplo de estrutura possível:
-
+```text
 .
 ├── src/                # Código-fonte principal
 ├── tests/              # Testes automatizados
@@ -67,7 +67,7 @@ Exemplo de estrutura possível:
 ├── .gitignore
 ├── README.md
 └── <arquivo-de-build>  # Configuração de execução
-
+```
 
 ### Premissas
 
