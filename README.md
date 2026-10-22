@@ -118,20 +118,20 @@ Se algum desses mecanismos ainda não estiver implementado, registre-o como melh
 - Mantenha dependências atualizadas.
 - Evite registrar tokens, senhas ou dados pessoais em logs.
 
-### PSolução de problemas
+### Solução de problemas
 
 
-```json
-Falha na instalação de dependências
+```text
+- Falha na instalação de dependências
 Verifique a versão do runtime, o gerenciador de pacotes e a compatibilidade das dependências.
 
-Erro de conexão com o banco de dados
+- Erro de conexão com o banco de dados
 Confirme o endereço de conexão, as credenciais, a disponibilidade do serviço e as permissões do usuário.
 
-Aplicação não inicia
+- Aplicação não inicia
 Revise as variáveis de ambiente, os logs de inicialização, os requisitos de execução e a porta configurada.
 
-Testes falham
+- Testes falham
 Verifique se as dependências de teste estão instaladas, se os serviços necessários estão disponíveis e se os dados de teste estão configurados corretamente.
 ```
 
