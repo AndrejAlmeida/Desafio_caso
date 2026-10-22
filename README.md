@@ -82,7 +82,7 @@ Credenciais e permissões estão configuradas de forma adequada.
 Os responsáveis pela operação possuem acesso aos recursos necessários.
 Premissas não verificadas devem ser identificadas como pendências, em vez de serem consideradas garantidas.
 
-### SLimitações conhecidas
+### Limitações conhecidas
 
 Registre nesta seção as limitações técnicas e funcionais identificadas.
 
