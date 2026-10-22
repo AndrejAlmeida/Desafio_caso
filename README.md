@@ -1,6 +1,6 @@
 Desafio no Sicredi NovaRota
 
-## Aqui colocarei algumas descricoes , imagens e evidencias serão colocadas no arquivo PDF, que será disponibilizado.
+## Aqui colocarei algumas descricoes , imagens e evidencias serão colocadas no arquivo DOC, que será disponibilizado.
 
 
 ## Architecture
