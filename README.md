@@ -86,14 +86,14 @@ Premissas não verificadas devem ser identificadas como pendências, em vez de s
 
 Registre nesta seção as limitações técnicas e funcionais identificadas.
 
-
+```text
 Limitação	                                Impacto	                                        Possível mitigação
 Dependência de serviços externos	        Indisponibilidade pode interromper           Implementar retentativas   
                                           fluxos dependentes	                         e tratamento de falhas
 Cobertura de testes incompleta	          Maior risco de regressões	                   Ampliar os testes automatizados
 Configuração manual do ambiente	          Aumenta o esforço de instalação	             Automatizar a configuração
 Capacidade de processamento não validada	Desempenho em escala desconhecido	           Realizar testes de carga
-
+```
   A tabela apresenta exemplos de possíveis limitações, não problemas confirmados do projeto. Mantenha apenas os itens efetivamente identificados.
 
 ### Tratamento de erros e observabilidade
