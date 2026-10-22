@@ -99,12 +99,13 @@ Capacidade de processamento não validada	Desempenho em escala desconhecido	    
 ### Tratamento de erros e observabilidade
 
 Documente os mecanismos disponíveis para diagnóstico e operação:
-
-Registro de erros e eventos relevantes.
-Validação de dados de entrada.
-Tratamento de falhas em integrações.
-Monitoramento de disponibilidade e desempenho.
-Identificação de erros por logs e mensagens de diagnóstico.
+```text
+- Registro de erros e eventos relevantes.
+- Validação de dados de entrada.
+- Tratamento de falhas em integrações.
+- Monitoramento de disponibilidade e desempenho.
+- Identificação de erros por logs e mensagens de diagnóstico.
+```
 Se algum desses mecanismos ainda não estiver implementado, registre-o como melhoria futura.
 ---
 
